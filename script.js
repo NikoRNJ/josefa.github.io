@@ -13,5 +13,7 @@ prev.addEventListener("click",()=>{slider.scrollBy({left:-slider.clientWidth*0.8
 next.addEventListener("click",scrollBy);
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in-view")}})},{threshold:.15});
 document.querySelectorAll(".section, .card, .split, .slide").forEach(el=>{el.classList.add("reveal");io.observe(el)});
-const form=document.getElementById("contact-form");
-form.addEventListener("submit",e=>{e.preventDefault();const data=new FormData(form);const payload={nombre:data.get("nombre"),email:data.get("email"),mensaje:data.get("mensaje"),ts:Date.now()};localStorage.setItem("contacto-josefa",JSON.stringify(payload));form.reset();alert("Gracias, te escribiré pronto.")});
+const faqItems=document.querySelectorAll(".faq-item");
+faqItems.forEach(d=>{d.addEventListener("toggle",()=>{if(d.open){faqItems.forEach(o=>{if(o!==d)o.open=false})}})});
+const nform=document.getElementById("newsletter-form");
+if(nform){nform.addEventListener("submit",e=>{e.preventDefault();const email=new FormData(nform).get("newsletter_email");localStorage.setItem("newsletter-josefa",JSON.stringify({email,ts:Date.now()}));nform.reset();alert("¡Gracias por unirte!")})}

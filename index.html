@@ -18,8 +18,11 @@
       <a href="#sobre">Sobre mí</a>
       <a href="#moda">Moda</a>
       <a href="#proyectos">Proyectos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#testimonios">Testimonios</a>
       <a href="#blog">Blog</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">☰</button>
   </div>
@@ -100,6 +103,39 @@
     </div>
   </section>
 
+  <section id="servicios" class="section container" aria-label="Servicios">
+    <h2 class="section-title">Servicios</h2>
+    <div class="services-grid">
+      <article class="service-card">
+        <h3>Editorial de moda</h3>
+        <p>Dirección creativa, styling y producción para campañas suaves y femeninas.</p>
+        <a class="btn secondary" href="#">Solicitar</a>
+      </article>
+      <article class="service-card">
+        <h3>Moodboards & branding</h3>
+        <p>Paletas pastel, identidades delicadas y kits visuales para marcas.</p>
+        <a class="btn secondary" href="#">Solicitar</a>
+      </article>
+      <article class="service-card">
+        <h3>Fotografía lifestyle</h3>
+        <p>Sesiones con luz suave y composición minimalista para redes y catálogos.</p>
+        <a class="btn secondary" href="#">Solicitar</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="clientes" class="section container" aria-label="Clientes">
+    <h2 class="section-title">Marcas y colaboraciones</h2>
+    <div class="logo-row">
+      <div class="logo-chip">Luna</div>
+      <div class="logo-chip">Salvia</div>
+      <div class="logo-chip">Durazno</div>
+      <div class="logo-chip">Lavanda</div>
+      <div class="logo-chip">Coral</div>
+      <div class="logo-chip">Aqua</div>
+    </div>
+  </section>
+
   <section class="section slider-wrap" aria-label="Destinos">
     <div class="slider-controls container">
       <h2 class="section-title">Destinos que amo</h2>
@@ -160,22 +196,53 @@
     </div>
   </section>
 
-  <section id="contacto" class="section container" aria-label="Contacto">
-    <h2 class="section-title">Hablemos</h2>
-    <form class="contact-form" id="contact-form">
-      <div class="form-row">
-        <label>Nombre
-          <input type="text" name="nombre" required>
-        </label>
-        <label>Email
-          <input type="email" name="email" required>
-        </label>
-      </div>
-      <label>Mensaje
-        <textarea name="mensaje" rows="5" required></textarea>
-      </label>
-      <button class="btn primary" type="submit">Enviar</button>
-    </form>
+  <section id="testimonios" class="section container" aria-label="Testimonios">
+    <h2 class="section-title">Testimonios</h2>
+    <div class="testimonials-grid">
+      <article class="testimonial">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop" alt="Cliente" loading="lazy">
+        <p>“Su dirección creativa elevó por completo nuestra campaña, logrando una estética suave y profesional.”</p>
+        <div class="author">María — SunKiss</div>
+      </article>
+      <article class="testimonial">
+        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=200&auto=format&fit=crop" alt="Cliente" loading="lazy">
+        <p>“Los moodboards pastel ayudaron a alinear la marca con una identidad clara y femenina.”</p>
+        <div class="author">Ana — Lavanda Studio</div>
+      </article>
+      <article class="testimonial">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=200&auto=format&fit=crop" alt="Cliente" loading="lazy">
+        <p>“Fotografías con luz suave y composición impecable, listas para redes y catálogo.”</p>
+        <div class="author">Valentina — Coral Swim</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="faq" class="section container" aria-label="Preguntas frecuentes">
+    <h2 class="section-title">Preguntas frecuentes</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>¿Cómo trabajo los editoriales?</summary>
+        <p>Definimos paleta, concepto y locación. Preparación de outfits, shooting y selección final.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué entregables recibo?</summary>
+        <p>Galería editada, moodboard, guía de color y archivos optimizados para web y redes.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Plazos y disponibilidad?</summary>
+        <p>Proyectos pequeños de 1–2 semanas; campañas completas de 3–4 semanas.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section newsletter" aria-label="Newsletter">
+    <div class="container newsletter-inner">
+      <h2 class="section-title">Newsletter pastel</h2>
+      <form id="newsletter-form" class="newsletter-form">
+        <input type="email" name="newsletter_email" placeholder="Tu email" required>
+        <button class="btn primary" type="submit">Unirme</button>
+      </form>
+    </div>
   </section>
 
 </main>

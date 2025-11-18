@@ -1,0 +1,376 @@
+{
+  "source": "c:\\Users\\Nikoder\\Desktop\\Programacion\\proyectos\\portafolioJosefa\\Portafolio (3).pdf",
+  "pages": 22,
+  "raw_text_file": "data/portfolio_raw.txt",
+  "bio": {
+    "nombre": "Josefa Vodnizza",
+    "descripcion": "Soy Josefa, parte de una generación que vive entre lo análogo y lo digital. Me mueven la imaginación, la creatividad y la originalidad; estoy siempre iterando, cambiando y creando. Me considero proactiva, curiosa y versátil. Disfruto los desafíos y el trabajo en equipo; busco que cada proyecto logre sus objetivos y que mi visión aporte una mirada fresca y sensible."
+  },
+  "valores": "Trabajo desde el cuidado: priorizo procesos responsables, materiales con menor impacto y una narrativa que promueve bienestar, diversidad y respeto por el entorno.",
+  "contacto": {
+    "email": "josefaavodnizza@gmail.com",
+    "instagram": "@_josefavodnizza",
+    "telefono": "+569 51987473"
+  },
+  "cv": {
+    "educacion": ["Diseño (mención Moda y Gestión), Universidad del Desarrollo"],
+    "habilidades": ["Styling", "Dirección creativa", "Fotografía lifestyle", "Moodboarding", "Edición"],
+    "herramientas": ["Adobe Photoshop", "Adobe Lightroom", "Canva", "Notion", "Figma básico"]
+  },
+  "proyectos": [
+    {"titulo":"Experimentación Textil: Sincretismo Latinoamericano","categoria":"Textil","descripcion":"Relectura de Torres García con hilo rojo y tul, diálogo entre geometría y ligereza.","imagenes":["mousai.cl_1701651906_3250014209080492149_25764758151.jpg","assets/images/portfolio/page-2-img-394.jpeg"]},
+    {"titulo":"Ígneo","categoria":"Retail","descripcion":"Colección inspirada en volcanes y literatura; terracota y azul marino como ejes.","imagenes":["mousai.cl_1704640478_3275084170296201214_25764758151.jpg","assets/images/portfolio/page-8-img-61.jpeg"]},
+    {"titulo":"Recorrido Cíclico","categoria":"Prêt-à-porter","descripcion":"El agua como memoria y ciclo sin fin; transparencia y reflejo.","imagenes":["assets/images/portfolio/page-13-img-86.jpeg","assets/images/portfolio/page-13-img-85.png"]},
+    {"titulo":"Joyas Contemporáneas","categoria":"Joyería","descripcion":"Piezas en cobre martillado que reflejan la luz como el agua.","imagenes":["assets/images/portfolio/page-17-img-134.jpeg","assets/images/portfolio/page-17-img-133.png"]},
+    {"titulo":"Pasarela D","categoria":"Pasarela","descripcion":"Exposición con foco en ritmo, fluidez y coherencia estética.","imagenes":["assets/images/portfolio/page-19-img-143.png"]},
+    {"titulo":"Mención en Revista YA!","categoria":"Reconocimiento","descripcion":"Reconocimiento editorial que destaca identidad y consistencia.","imagenes":["assets/images/portfolio/page-20-img-147.png"]},
+    {"titulo":"Joya del Pacífico","categoria":"Colaboración","descripcion":"Colaboración con Mathilda Tinkler para Miss Continental 2025.","imagenes":["assets/images/portfolio/page-21-img-151.png","assets/images/portfolio/page-21-img-152.png"]}
+  ],
+  "procesos": {
+    "editorial": [
+      {"titulo":"Luz suave","img":"assets/images/portfolio/page-8-img-60.jpeg"},
+      {"titulo":"Paleta durazno","img":"assets/images/portfolio/page-2-img-397.jpeg"},
+      {"titulo":"Composición mínima","img":"assets/images/portfolio/page-15-img-614.jpeg"}
+    ],
+    "moodboards": [
+      {"titulo":"Armónicos pastel","img":"assets/images/portfolio/page-10-img-71.png"},
+      {"titulo":"Texturas ligeras","img":"assets/images/portfolio/page-10-img-73.png"},
+      {"titulo":"Lavanda y salvia","img":"assets/images/portfolio/page-10-img-74.png"}
+    ],
+    "lifestyle": [
+      {"titulo":"Costa dorada","img":"assets/images/portfolio/page-8-img-61.jpeg"},
+      {"titulo":"Selva húmeda","img":"assets/images/portfolio/page-8-img-62.jpeg"},
+      {"titulo":"Detalle orgánico","img":"assets/images/portfolio/page-15-img-629.jpeg"}
+    ]
+  },
+  "images": [
+    {
+      "file": "assets/images/portfolio/page-2-img-394.jpeg",
+      "page": 2
+    },
+    {
+      "file": "assets/images/portfolio/page-2-img-397.jpeg",
+      "page": 2
+    },
+    {
+      "file": "assets/images/portfolio/page-5-img-544.png",
+      "page": 5
+    },
+    {
+      "file": "assets/images/portfolio/page-6-img-50.png",
+      "page": 6
+    },
+    {
+      "file": "assets/images/portfolio/page-6-img-51.png",
+      "page": 6
+    },
+    {
+      "file": "assets/images/portfolio/page-6-img-52.png",
+      "page": 6
+    },
+    {
+      "file": "assets/images/portfolio/page-7-img-56.png",
+      "page": 7
+    },
+    {
+      "file": "assets/images/portfolio/page-8-img-60.jpeg",
+      "page": 8
+    },
+    {
+      "file": "assets/images/portfolio/page-8-img-61.jpeg",
+      "page": 8
+    },
+    {
+      "file": "assets/images/portfolio/page-8-img-62.jpeg",
+      "page": 8
+    },
+    {
+      "file": "assets/images/portfolio/page-8-img-431.jpeg",
+      "page": 8
+    },
+    {
+      "file": "assets/images/portfolio/page-9-img-67.png",
+      "page": 9
+    },
+    {
+      "file": "assets/images/portfolio/page-9-img-561.png",
+      "page": 9
+    },
+    {
+      "file": "assets/images/portfolio/page-10-img-71.png",
+      "page": 10
+    },
+    {
+      "file": "assets/images/portfolio/page-10-img-72.png",
+      "page": 10
+    },
+    {
+      "file": "assets/images/portfolio/page-10-img-73.png",
+      "page": 10
+    },
+    {
+      "file": "assets/images/portfolio/page-10-img-74.png",
+      "page": 10
+    },
+    {
+      "file": "assets/images/portfolio/page-11-img-574.png",
+      "page": 11
+    },
+    {
+      "file": "assets/images/portfolio/page-11-img-577.png",
+      "page": 11
+    },
+    {
+      "file": "assets/images/portfolio/page-11-img-580.png",
+      "page": 11
+    },
+    {
+      "file": "assets/images/portfolio/page-11-img-583.png",
+      "page": 11
+    },
+    {
+      "file": "assets/images/portfolio/page-11-img-586.png",
+      "page": 11
+    },
+    {
+      "file": "assets/images/portfolio/page-11-img-589.png",
+      "page": 11
+    },
+    {
+      "file": "assets/images/portfolio/page-11-img-592.png",
+      "page": 11
+    },
+    {
+      "file": "assets/images/portfolio/page-11-img-595.png",
+      "page": 11
+    },
+    {
+      "file": "assets/images/portfolio/page-12-img-463.png",
+      "page": 12
+    },
+    {
+      "file": "assets/images/portfolio/page-13-img-85.png",
+      "page": 13
+    },
+    {
+      "file": "assets/images/portfolio/page-13-img-86.jpeg",
+      "page": 13
+    },
+    {
+      "file": "assets/images/portfolio/page-13-img-599.png",
+      "page": 13
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-90.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-91.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-92.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-93.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-94.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-95.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-96.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-97.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-98.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-99.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-100.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-101.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-102.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-103.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-104.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-105.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-106.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-107.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-108.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-109.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-110.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-111.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-112.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-113.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-114.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-115.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-116.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-117.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-118.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-119.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-120.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-14-img-121.png",
+      "page": 14
+    },
+    {
+      "file": "assets/images/portfolio/page-15-img-608.jpeg",
+      "page": 15
+    },
+    {
+      "file": "assets/images/portfolio/page-15-img-611.png",
+      "page": 15
+    },
+    {
+      "file": "assets/images/portfolio/page-15-img-614.jpeg",
+      "page": 15
+    },
+    {
+      "file": "assets/images/portfolio/page-15-img-617.jpeg",
+      "page": 15
+    },
+    {
+      "file": "assets/images/portfolio/page-15-img-620.jpeg",
+      "page": 15
+    },
+    {
+      "file": "assets/images/portfolio/page-15-img-623.jpeg",
+      "page": 15
+    },
+    {
+      "file": "assets/images/portfolio/page-15-img-626.jpeg",
+      "page": 15
+    },
+    {
+      "file": "assets/images/portfolio/page-15-img-629.jpeg",
+      "page": 15
+    },
+    {
+      "file": "assets/images/portfolio/page-16-img-127.png",
+      "page": 16
+    },
+    {
+      "file": "assets/images/portfolio/page-16-img-128.png",
+      "page": 16
+    },
+    {
+      "file": "assets/images/portfolio/page-16-img-129.png",
+      "page": 16
+    },
+    {
+      "file": "assets/images/portfolio/page-17-img-133.png",
+      "page": 17
+    },
+    {
+      "file": "assets/images/portfolio/page-17-img-134.jpeg",
+      "page": 17
+    },
+    {
+      "file": "assets/images/portfolio/page-17-img-135.png",
+      "page": 17
+    },
+    {
+      "file": "assets/images/portfolio/page-17-img-632.png",
+      "page": 17
+    },
+    {
+      "file": "assets/images/portfolio/page-18-img-139.png",
+      "page": 18
+    },
+    {
+      "file": "assets/images/portfolio/page-19-img-142.png",
+      "page": 19
+    },
+    {
+      "file": "assets/images/portfolio/page-19-img-143.png",
+      "page": 19
+    },
+    {
+      "file": "assets/images/portfolio/page-20-img-147.png",
+      "page": 20
+    },
+    {
+      "file": "assets/images/portfolio/page-21-img-151.png",
+      "page": 21
+    },
+    {
+      "file": "assets/images/portfolio/page-21-img-152.png",
+      "page": 21
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portafolio Josefa</title>
+<meta name="description" content="Portafolio de moda y lifestyle universitario con tonos pastel femeninos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home">Josefa</a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#sobre">Sobre mí</a>
+      <a href="#moda">Moda</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#blog">Blog</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero" aria-label="Hero">
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Playa cálida" loading="eager">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content container">
+      <h1>Moda y lifestyle</h1>
+      <p>Portafolio universitario con inspiración tropical y tonos pastel suaves.</p>
+      <div class="cta-group">
+        <a class="btn primary" href="#proyectos">Ver proyectos</a>
+        <a class="btn ghost" href="#sobre">Conóceme</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section container">
+    <div class="about">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop" alt="Retrato" loading="lazy" class="about-photo">
+      <div class="about-text">
+        <h2 class="section-title">Hola, soy Josefa</h2>
+        <p>Estudiante de moda y comunicación visual. Me inspiran los paisajes costeros, las texturas ligeras y una estética femenina con toques pastel. Aquí comparto mis proyectos, editoriales y sitios que amo.</p>
+        <div class="stats">
+          <div class="stat"><span>3+</span> proyectos editoriales</div>
+          <div class="stat"><span>8</span> moodboards creados</div>
+          <div class="stat"><span>12</span> shoots dirigidos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="moda" class="section split-banner" aria-label="Moda">
+    <div class="split" style="--bg:url('https://images.unsplash.com/photo-1512295767273-ac109ac3acfa?q=80&w=1600&auto=format&fit=crop')">
+      <div class="split-content">
+        <h2>Colecciones</h2>
+        <p>Selecciones cuidadas con armonías de color pensadas para climas cálidos y días de playa.</p>
+        <a class="btn secondary" href="#proyectos">Explorar</a>
+      </div>
+    </div>
+    <div class="split" style="--bg:url('https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=1600&auto=format&fit=crop')">
+      <div class="split-content">
+        <h2>Editorial</h2>
+        <p>Composiciones con luz suave, paletas crema y detalles orgánicos.</p>
+        <a class="btn secondary" href="#blog">Ver notas</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="section container" aria-label="Proyectos">
+    <h2 class="section-title">Proyectos destacados</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515343482025-3b43f01f4442?q=80&w=800&auto=format&fit=crop" alt="Look costero" loading="lazy">
+        <div class="card-body">
+          <h3>Sunset Soirée</h3>
+          <p>Editoral con tonos durazno y lavanda, texturas ligeras y brillos acuosos.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop" alt="Retrato playa" loading="lazy">
+        <div class="card-body">
+          <h3>Tropical Wishlist</h3>
+          <p>Moodboard de destinos y outfits delicados para temporada cálida.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1496769336828-c522a3a7e33e?q=80&w=800&auto=format&fit=crop" alt="Detalles textiles" loading="lazy">
+        <div class="card-body">
+          <h3>Body Wisdom</h3>
+          <p>Campaña suave con tipografías elegantes y composición minimalista.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section slider-wrap" aria-label="Destinos">
+    <div class="slider-controls container">
+      <h2 class="section-title">Destinos que amo</h2>
+      <div class="controls">
+        <button class="btn icon" id="prev">◀</button>
+        <button class="btn icon" id="next">▶</button>
+      </div>
+    </div>
+    <div class="slider" id="slider">
+      <figure class="slide"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Mar turquesa" loading="lazy"><figcaption>Mar turquesa</figcaption></figure>
+      <figure class="slide"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop" alt="Costa dorada" loading="lazy"><figcaption>Costa dorada</figcaption></figure>
+      <figure class="slide"><img src="https://images.unsplash.com/photo-1526481280691-9069436a5e84?q=80&w=1200&auto=format&fit=crop" alt="Selva húmeda" loading="lazy"><figcaption>Selva húmeda</figcaption></figure>
+      <figure class="slide"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop" alt="Acantilados" loading="lazy"><figcaption>Acantilados</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="blog" class="section container" aria-label="Blog">
+    <h2 class="section-title">Notas y recursos</h2>
+    <div class="grid blog">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=800&auto=format&fit=crop" alt="Guía de paletas" loading="lazy">
+        <div class="card-body">
+          <h3>Guía de paletas pastel</h3>
+          <p>Cómo combinar durazno, rosa y salvia en looks veraniegos.</p>
+          <a class="btn text" href="#">Leer</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800&auto=format&fit=crop" alt="Fotografía" loading="lazy">
+        <div class="card-body">
+          <h3>Fotografía con luz suave</h3>
+          <p>Trucos para lograr atmósferas femeninas y cálidas.</p>
+          <a class="btn text" href="#">Leer</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=800&auto=format&fit=crop" alt="Moodboard" loading="lazy">
+        <div class="card-body">
+          <h3>Moodboards efectivos</h3>
+          <p>Estructuras y recursos para presentar ideas con claridad.</p>
+          <a class="btn text" href="#">Leer</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section instagram" aria-label="Instagram">
+    <div class="container">
+      <h2 class="section-title">Spots para fotos</h2>
+      <div class="insta-row">
+        <img src="https://images.unsplash.com/photo-1478399305562-fbc9c84d9d24?q=80&w=600&auto=format&fit=crop" alt="Spot 1" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=600&auto=format&fit=crop" alt="Spot 2" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1508182311256-30c1cfeb9be9?q=80&w=600&auto=format&fit=crop" alt="Spot 3" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=600&auto=format&fit=crop" alt="Spot 4" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1526481280691-9069436a5e84?q=80&w=600&auto=format&fit=crop" alt="Spot 5" loading="lazy">
+      </div>
+      <a class="btn primary" href="#">Sígueme</a>
+    </div>
+  </section>
+
+  <section id="contacto" class="section container" aria-label="Contacto">
+    <h2 class="section-title">Hablemos</h2>
+    <form class="contact-form" id="contact-form">
+      <div class="form-row">
+        <label>Nombre
+          <input type="text" name="nombre" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" required>
+        </label>
+      </div>
+      <label>Mensaje
+        <textarea name="mensaje" rows="5" required></textarea>
+      </label>
+      <button class="btn primary" type="submit">Enviar</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand">Josefa</div>
+      <p>Moda, lifestyle y proyectos universitarios.</p>
+    </div>
+    <div>
+      <div class="footer-title">Enlaces</div>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#blog">Blog</a>
+    </div>
+    <div>
+      <div class="footer-title">Contacto</div>
+      <a href="mailto:josefa@example.com">josefa@example.com</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="container copyright">© 2025 Josefa</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

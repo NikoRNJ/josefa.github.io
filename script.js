@@ -1,0 +1,17 @@
+const toggle=document.getElementById("nav-toggle");
+const links=document.getElementById("nav-links");
+toggle.addEventListener("click",()=>{const open=links.style.display==="flex";links.style.display=open?"none":"flex"});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",e=>{const id=a.getAttribute("href");const el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:"smooth",block:"start"});links.style.display="none"}})});
+const header=document.querySelector(".site-header");
+const onScroll=()=>{if(window.scrollY>10){header.style.background="rgba(255,255,255,.85)"}else{header.style.background="rgba(255,255,255,.6)"}};
+window.addEventListener("scroll",onScroll);
+const slider=document.getElementById("slider");
+const prev=document.getElementById("prev");
+const next=document.getElementById("next");
+const scrollBy=()=>slider.scrollBy({left:slider.clientWidth*0.8,behavior:"smooth"});
+prev.addEventListener("click",()=>{slider.scrollBy({left:-slider.clientWidth*0.8,behavior:"smooth"})});
+next.addEventListener("click",scrollBy);
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in-view")}})},{threshold:.15});
+document.querySelectorAll(".section, .card, .split, .slide").forEach(el=>{el.classList.add("reveal");io.observe(el)});
+const form=document.getElementById("contact-form");
+form.addEventListener("submit",e=>{e.preventDefault();const data=new FormData(form);const payload={nombre:data.get("nombre"),email:data.get("email"),mensaje:data.get("mensaje"),ts:Date.now()};localStorage.setItem("contacto-josefa",JSON.stringify(payload));form.reset();alert("Gracias, te escribiré pronto.")});

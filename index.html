@@ -15,45 +15,54 @@
   <div class="container nav">
     <a class="brand" href="#home">Josefa Vodnizza</a>
     <nav class="nav-links" id="nav-links">
-      <a href="#sobre">Sobre mí</a>
+      <a href="#sobre">Josefa Vodnizza</a>
       <a href="#moda">Moda</a>
       <a href="#proyectos">Proyectos</a>
       <a href="#servicios">Servicios</a>
       <a href="#clientes">Clientes</a>
       <a href="#testimonios">Testimonios</a>
-      <a href="#blog">Blog</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">☰</button>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu">&#9776;</button>
   </div>
 </header>
 
 <main id="home">
   <section class="hero" aria-label="Hero">
     <div class="hero-media">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Playa cálida" loading="eager" decoding="async" sizes="100vw" referrerpolicy="no-referrer">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" alt="Playa calida" loading="eager" decoding="async" sizes="100vw" referrerpolicy="no-referrer">
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content container">
       <h1>Josefa Vodnizza</h1>
-      <p>Portafolio universitario: moda, procesos creativos y proyectos del año.</p>
+            <p>Portafolio universitario que reune direccion creativa, procesos conscientes y proyectos editoriales desarrollados con una mirada responsable.</p>
       <div class="cta-group">
         <a class="btn primary" href="#proyectos">Ver proyectos</a>
-        <a class="btn ghost" href="#sobre">Conóceme</a>
+        <a class="btn ghost" href="#sobre">Conoceme</a>
       </div>
     </div>
   </section>
 
   <section id="sobre" class="section container">
     <div class="about">
-      <img src="assets/images/portfolio/page-13-img-86.jpeg" alt="Retrato" loading="lazy" class="about-photo">
+      <img src="josefa.jpg" alt="Retrato" loading="lazy" class="about-photo">
       <div class="about-text">
-        <h2 class="section-title">Sobre Josefa</h2>
-        <p id="about-text-p">Josefa Vodnizza, estudiante entre 18–22 años, enfocada en moda y comunicación visual. Este portafolio reúne sus proyectos universitarios, procesos creativos y editoriales con estética femenina pastel.</p>
+        <h2 class="section-title">Josefa Vodnizza</h2>
+                <p id="about-text-p">Soy Josefa, disenadora en formacion nacida en 2003, parte de una generacion que vive entre lo analogico y lo digital. Me mueve la curiosidad: trabajo con fotografia, viajes e ilustracion para construir narrativas sensibles que priorizan el trabajo en equipo y la responsabilidad en cada etapa.</p>
         <div class="stats">
           <div class="stat"><span>3+</span> proyectos editoriales</div>
           <div class="stat"><span>8</span> moodboards creados</div>
           <div class="stat"><span>12</span> shoots dirigidos</div>
+        </div>
+        <div class="cv-block">
+          <h3>Curriculum</h3>
+          <div class="cv-compact">
+            <div class="cv-chip"><strong>Educacion</strong><div id="cv-edu">Diseno (Moda y Gestion), UDD</div></div>
+            <div class="cv-chip"><strong>Habilidades</strong><div id="cv-habs">Styling - Direccion - Fotografia - Moodboards - Edicion</div></div>
+            <div class="cv-chip"><strong>Herramientas</strong><div id="cv-tools">Photoshop - Lightroom - Canva - Notion - Figma</div></div>
+            <div class="cv-chip"><strong>Reconocimientos</strong><div>Revista YA! - Pasarela D</div></div>
+            <div class="cv-chip"><strong>Contacto</strong><div>josefaavodnizza@gmail.com</div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -62,67 +71,54 @@
   <section id="moda" class="section split-banner" aria-label="Moda">
     <div class="split" style="--bg:url('destinos-inspiran/WhatsApp Image 2025-11-18 at 14.21.20 (1).jpeg')">
       <div class="split-content">
-        <h2>Editorial y prêt-à-porter</h2>
-        <p>Concepto, paleta y dirección creativa para colecciones como Ígneo y Recorrido Cíclico.</p>
+        <h2>Editorial y pret-a-porter</h2>
+        <p>Concepto, paleta y direccion creativa para colecciones como Igneo y Recorrido Ciclico.</p>
         <a class="btn secondary" href="#proyectos">Ver proyectos</a>
       </div>
     </div>
     <div class="split" style="--bg:url('destinos-inspiran/WhatsApp Image 2025-11-18 at 14.21.20 (2).jpeg')">
       <div class="split-content">
-        <h2>Joyería conceptual</h2>
-        <p>Piezas contemporáneas inspiradas en el ciclo del agua: continuidad, luz y fluidez.</p>
+        <h2>Joyeria conceptual</h2>
+        <p>Piezas contemporaneas inspiradas en el ciclo del agua: continuidad, luz y fluidez.</p>
         <a class="btn secondary" href="#proceso">Procesos creativos</a>
       </div>
     </div>
   </section>
 
   <section id="proyectos" class="section container" aria-label="Proyectos">
-    <h2 class="section-title">Proyectos del año</h2>
-    <div class="grid" id="projects-grid"></div>
+    <h2 class="section-title">Proyectos del ano</h2>
+    <div class="slider-controls">
+      <div class="controls">
+        <button class="btn icon" id="p-prev">&#9664;</button>
+        <button class="btn icon" id="p-next">&#9654;</button>
+      </div>
+      <div class="s-dots" id="proj-dots"></div>
+    </div>
+    <div class="projects-slider" id="proj-slider"></div>
   </section>
 
-  <section id="videos" class="section container" aria-label="Videos">
-    <h2 class="section-title">Videos</h2>
-    <div class="video-wrap">
-      <video id="video-player" class="video" src="VID-20251118-WA0059.mp4" preload="metadata"></video>
-      <div class="video-controls">
-        <button id="v-play" class="btn icon">▶</button>
-        <input id="v-progress" type="range" min="0" max="100" value="0" step="0.1">
-        <span id="v-time">0:00 / 0:00</span>
-        <button id="v-mute" class="btn icon">🔈</button>
-        <input id="v-volume" type="range" min="0" max="1" value="1" step="0.05">
-        <button id="v-full" class="btn icon">⛶</button>
-      </div>
-      <div class="video-thumbs">
-        <button class="thumb" data-src="VID-20251118-WA0059.mp4">Video 1</button>
-        <button class="thumb" data-src="VID-20251118-WA0060.mp4">Video 2</button>
-      </div>
-    </div>
-  </section>
 
   <section id="valores" class="section container" aria-label="Valores y sostenibilidad">
     <h2 class="section-title">Valores y sostenibilidad</h2>
-    <p id="valores-text">Compromiso con procesos responsables, selección de materiales con bajo impacto y una narrativa que promueve bienestar, diversidad y cuidado del entorno.</p>
-  </section>
-
-  <section id="cv" class="section container" aria-label="Currículum">
-    <h2 class="section-title">Currículum</h2>
-    <div class="cv-compact">
-      <div class="cv-chip"><strong>Educación</strong><div id="cv-edu">Diseño (Moda y Gestión), UDD</div></div>
-      <div class="cv-chip"><strong>Habilidades</strong><div id="cv-habs">Styling · Dirección · Fotografía · Moodboards · Edición</div></div>
-      <div class="cv-chip"><strong>Herramientas</strong><div id="cv-tools">Photoshop · Lightroom · Canva · Notion · Figma</div></div>
-      <div class="cv-chip"><strong>Reconocimientos</strong><div>Revista YA! · Pasarela D</div></div>
-      <div class="cv-chip"><strong>Contacto</strong><div>josefaavodnizza@gmail.com</div></div>
-    </div>
-    
-  </section>
-
-  <section id="contacto" class="section container" aria-label="Contacto">
-    <h2 class="section-title">Contacto</h2>
-    <div class="contact-rows">
-      <p>Email: <a id="contact-email" href="mailto:josefaavodnizza@gmail.com">josefaavodnizza@gmail.com</a></p>
-      <p>Instagram: <a id="contact-instagram" href="https://www.instagram.com/_josefavodnizza" target="_blank" rel="noopener">@_josefavodnizza</a></p>
-      <p>Teléfono: <span id="contact-phone">+569 51987473</span></p>
+    <div class="values-layout">
+      <div class="values-text">
+        <p class="section-note">Trabajo junto a talleres locales y proveedores que comparten la idea de una moda amable. Eso implica planificar producciones pequenas, privilegiar materiales recuperados o de bajo impacto y conversar con quienes usan las prendas sobre como se sentiran.</p>
+        <p>Registro bitacoras de proceso, documento el origen de cada material y evaluo como las piezas se insertan en contextos reales. La sostenibilidad no es un checklist sino acompanamiento constante.</p>
+      </div>
+      <div class="values-grid">
+        <article class="value-card">
+          <h3>Materiales conscientes</h3>
+          <p>Linos recuperados, sedas heredadas y denim reutilizado. Cada proyecto documenta procedencia, composicion y cuidado.</p>
+        </article>
+        <article class="value-card">
+          <h3>Cadena transparente</h3>
+          <p>Talleres de barrio, tiempos reales y contratos claros. Me involucro en cada fitting para asegurar comodidad y bienestar.</p>
+        </article>
+        <article class="value-card">
+          <h3>Impacto emocional</h3>
+          <p>Moda como relato: bitacoras, moodboards y fotografias que muestran como cada prenda cambia la experiencia de quien la usa.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -136,37 +132,28 @@
     <div class="gallery" id="gallery">
       <div class="gallery-track"></div>
       <div class="gallery-controls">
-        <button class="btn icon" id="g-prev">◀</button>
+        <button class="btn icon" id="g-prev">&#9664;</button>
         <div class="dots" id="g-dots"></div>
-        <button class="btn icon" id="g-next">▶</button>
+        <button class="btn icon" id="g-next">&#9654;</button>
       </div>
     </div>
   </section>
 
-  <section id="servicios" class="section container" aria-label="Servicios">
+    <section id="servicios" class="section container" aria-label="Servicios">
     <h2 class="section-title">Servicios</h2>
     <div class="services-grid">
       <article class="service-card">
-        <h3>Editorial y prêt-à-porter</h3>
-        <p>Concepto, paleta y dirección creativa para colecciones como Ígneo y Recorrido Cíclico.</p>
+        <h3>Editorial y pret-a-porter</h3>
+        <p>Construyo narrativas completas: brief editorial, investigacion literaria, paletas sensibles y fittings documentados para colecciones como Igneo o Recorrido Ciclico.</p>
       </article>
       <article class="service-card">
         <h3>Moodboards & branding</h3>
-        <p>Identidades visuales femeninas con armonías pastel y guías de color.</p>
+        <p>Creo moodboards tactiles, guias de color y lineamientos de estilo que permiten a nuevas marcas comunicar frescura, suavidad y coherencia.</p>
       </article>
       <article class="service-card">
-        <h3>Joyería conceptual</h3>
-        <p>Piezas contemporáneas inspiradas en el ciclo del agua (cobre, fluidez y luz).</p>
+        <h3>Joyeria conceptual</h3>
+        <p>Diseno piezas de joyeria conceptual en cobre martillado y materiales mixtos, inspiradas en la continuidad del agua y su brillo organico.</p>
       </article>
-    </div>
-  </section>
-
-  <section id="clientes" class="section container" aria-label="Colaboraciones y prensa">
-    <h2 class="section-title">Colaboraciones y prensa</h2>
-    <div class="logo-row">
-      <div class="logo-chip">Mathilda Tinkler</div>
-      <div class="logo-chip">Miss Continental 2025</div>
-      <div class="logo-chip">Revista YA!</div>
     </div>
   </section>
 
@@ -174,8 +161,8 @@
     <div class="slider-controls container">
       <h2 class="section-title">Destinos que me inspiran</h2>
       <div class="controls">
-        <button class="btn icon" id="prev">◀</button>
-        <button class="btn icon" id="next">▶</button>
+        <button class="btn icon" id="prev">&#9664;</button>
+        <button class="btn icon" id="next">&#9654;</button>
       </div>
       <div class="s-dots" id="s-dots"></div>
     </div>
@@ -194,7 +181,18 @@
 
   <section id="reconocimientos" class="section container" aria-label="Reconocimientos y publicaciones">
     <h2 class="section-title">Reconocimientos y publicaciones</h2>
+    <p class="section-note">Pasarela D, Revista YA! y concursos universitarios han destacado los experimentos textiles y la colaboracion con Mathilda Tinkler. Aqui registro esas menciones con enlaces y materiales de apoyo.</p>
     <div class="grid" id="recon-grid"></div>
+  </section>
+
+  <section id="clientes" class="section container" aria-label="Colaboraciones y prensa">
+    <h2 class="section-title">Colaboraciones y prensa</h2>
+    <p class="section-note">Trabajo junto a marcas emergentes, concursos y proyectos personales. Estas alianzas me permiten explorar styling editorial, joyeria conceptual y comunicacion visual para diferentes audiencias.</p>
+    <div class="logo-row">
+      <div class="logo-chip">Mathilda Tinkler</div>
+      <div class="logo-chip">Miss Continental 2025</div>
+      <div class="logo-chip">Revista YA!</div>
+    </div>
   </section>
 
   <section class="section instagram" aria-label="Instagram">
@@ -207,7 +205,7 @@
         <img src="assets/images/portfolio/page-15-img-614.jpeg" alt="Spot 4" loading="lazy" decoding="async" sizes="(max-width:680px) 33vw, 20vw">
         <img src="assets/images/portfolio/page-15-img-629.jpeg" alt="Spot 5" loading="lazy" decoding="async" sizes="(max-width:680px) 33vw, 20vw">
       </div>
-      <a class="btn primary" href="https://www.instagram.com/_josefavodnizza" target="_blank" rel="noopener">Sígueme</a>
+      <a class="btn primary" href="https://www.instagram.com/_josefavodnizza" target="_blank" rel="noopener">Sigueme</a>
     </div>
   </section>
 
@@ -216,29 +214,38 @@
     <div class="testimonials-grid">
       <article class="testimonial">
         <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop" alt="Cliente" loading="lazy">
-        <p>“Su dirección creativa elevó por completo nuestra campaña, logrando una estética suave y profesional.”</p>
-        <div class="author">María — SunKiss</div>
+        <p>"Su direccion creativa elevo por completo nuestra campana, logrando una estetica suave y profesional."</p>
+        <div class="author">Maria - SunKiss</div>
       </article>
       <article class="testimonial">
         <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=200&auto=format&fit=crop" alt="Cliente" loading="lazy">
-        <p>“Los moodboards pastel ayudaron a alinear la marca con una identidad clara y femenina.”</p>
-        <div class="author">Ana — Lavanda Studio</div>
+        <p>"Los moodboards pastel ayudaron a alinear la marca con una identidad clara y femenina."</p>
+        <div class="author">Ana - Lavanda Studio</div>
       </article>
       <article class="testimonial">
         <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=200&auto=format&fit=crop" alt="Cliente" loading="lazy">
-        <p>“Fotografías con luz suave y composición impecable, listas para redes y catálogo.”</p>
-        <div class="author">Valentina — Coral Swim</div>
+        <p>"Fotografias con luz suave y composicion impecable, listas para redes y catalogo."</p>
+        <div class="author">Valentina - Coral Swim</div>
       </article>
+    </div>
+  </section>
+  <section id="contacto" class="section container" aria-label="Contacto">
+    <h2 class="section-title">Contacto</h2>
+    <p class="section-note">Colaboro en styling, shootings editoriales, proyectos universitarios y pasarelas. Escribeme para coordinar Moodboards, fittings o asesorias y respondere a la brevedad.</p>
+    <div class="contact-rows">
+      <p>Email: <a id="contact-email" href="mailto:josefaavodnizza@gmail.com">josefaavodnizza@gmail.com</a></p>
+      <p>Instagram: <a id="contact-instagram" href="https://www.instagram.com/_josefavodnizza" target="_blank" rel="noopener">@_josefavodnizza</a></p>
+      <p>Telefono: <span id="contact-phone">+569 51987473</span></p>
     </div>
   </section>
 
   <section id="faq" class="section container" aria-label="Preguntas frecuentes">
     <h2 class="section-title">Preguntas frecuentes</h2>
     <div class="faq">
-      <details class="faq-item"><summary>¿Qué es Ígneo?</summary><p>Colección que mezcla intensidad volcánica y narrativa literaria. Paleta: terracota y azul marino; siluetas fluidas y cortes audaces.</p></details>
-      <details class="faq-item"><summary>¿Qué significa “Recorrido cíclico”?</summary><p>El agua como memoria y ciclo sin fin. Transparencia y reflejo revelan capas de sentido que evolucionan con cada mirada.</p></details>
-      <details class="faq-item"><summary>¿Cómo se desarrollan las joyas contemporáneas?</summary><p>Piezas en cobre martillado con formas ondulantes; reflejan continuidad y cambio, inspiradas en el ciclo del agua.</p></details>
-      <details class="faq-item"><summary>¿Qué servicios ofrece Josefa?</summary><p>Editorial de moda y prêt-à-porter, moodboards/branding y joyería conceptual.</p></details>
+      <details class="faq-item"><summary>Que es Igneo?</summary><p>Coleccion que mezcla intensidad volcanica y narrativa literaria. Paleta: terracota y azul marino; siluetas fluidas y cortes audaces.</p></details>
+      <details class="faq-item"><summary>Que significa "Recorrido ciclico"?</summary><p>El agua como memoria y ciclo sin fin. Transparencia y reflejo revelan capas de sentido que evolucionan con cada mirada.</p></details>
+      <details class="faq-item"><summary>Como se desarrollan las joyas contemporaneas?</summary><p>Piezas en cobre martillado con formas ondulantes; reflejan continuidad y cambio, inspiradas en el ciclo del agua.</p></details>
+      <details class="faq-item"><summary>Que servicios ofrece Josefa?</summary><p>Editorial de moda y pret-a-porter, moodboards/branding y joyeria conceptual.</p></details>
     </div>
   </section>
 
@@ -254,7 +261,7 @@
       </div>
       <div>
         <div class="footer-title">Enlaces</div>
-        <a href="#sobre">Sobre mí</a>
+        <a href="#sobre">Josefa Vodnizza</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#reconocimientos">Reconocimientos</a>
       </div>
@@ -264,7 +271,7 @@
         <a href="https://www.instagram.com/_josefavodnizza" target="_blank" rel="noopener">@_josefavodnizza</a>
       </div>
     </div>
-    <div class="container copyright">© 2025 Josefa</div>
+    <div class="container copyright">(c) 2025 Josefa</div>
   </footer>
 
 <script src="js/main.js"></script>

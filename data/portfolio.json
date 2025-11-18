@@ -13,35 +13,176 @@
     "telefono": "+569 51987473"
   },
   "cv": {
-    "educacion": ["Diseño (mención Moda y Gestión), Universidad del Desarrollo"],
-    "habilidades": ["Styling", "Dirección creativa", "Fotografía lifestyle", "Moodboarding", "Edición"],
-    "herramientas": ["Adobe Photoshop", "Adobe Lightroom", "Canva", "Notion", "Figma básico"]
+    "educacion": [
+      "Diseño (mención Moda y Gestión), Universidad del Desarrollo"
+    ],
+    "habilidades": [
+      "Styling",
+      "Dirección creativa",
+      "Fotografía lifestyle",
+      "Moodboarding",
+      "Edición"
+    ],
+    "herramientas": [
+      "Adobe Photoshop",
+      "Adobe Lightroom",
+      "Canva",
+      "Notion",
+      "Figma básico"
+    ]
   },
   "proyectos": [
-    {"titulo":"Experimentación Textil: Sincretismo Latinoamericano","categoria":"Textil","descripcion":"Relectura de Torres García con hilo rojo y tul, diálogo entre geometría y ligereza.","imagenes":["mousai.cl_1701651906_3250014209080492149_25764758151.jpg","assets/images/portfolio/page-2-img-394.jpeg"]},
-    {"titulo":"Ígneo","categoria":"Retail","descripcion":"Colección inspirada en volcanes y literatura; terracota y azul marino como ejes.","imagenes":["mousai.cl_1704640478_3275084170296201214_25764758151.jpg","assets/images/portfolio/page-8-img-61.jpeg"]},
-    {"titulo":"Recorrido Cíclico","categoria":"Prêt-à-porter","descripcion":"El agua como memoria y ciclo sin fin; transparencia y reflejo.","imagenes":["assets/images/portfolio/page-13-img-86.jpeg","assets/images/portfolio/page-13-img-85.png"]},
-    {"titulo":"Joyas Contemporáneas","categoria":"Joyería","descripcion":"Piezas en cobre martillado que reflejan la luz como el agua.","imagenes":["assets/images/portfolio/page-17-img-134.jpeg","assets/images/portfolio/page-17-img-133.png"]},
-    {"titulo":"Pasarela D","categoria":"Pasarela","descripcion":"Exposición con foco en ritmo, fluidez y coherencia estética.","imagenes":["assets/images/portfolio/page-19-img-143.png"]},
-    {"titulo":"Mención en Revista YA!","categoria":"Reconocimiento","descripcion":"Reconocimiento editorial que destaca identidad y consistencia.","imagenes":["assets/images/portfolio/page-20-img-147.png"]},
-    {"titulo":"Joya del Pacífico","categoria":"Colaboración","descripcion":"Colaboración con Mathilda Tinkler para Miss Continental 2025.","imagenes":["assets/images/portfolio/page-21-img-151.png","assets/images/portfolio/page-21-img-152.png"]}
+    {
+      "titulo": "Experimentación Textil: Sincretismo Latinoamericano",
+      "categoria": "Textil",
+      "descripcion": "Interpretación contemporánea de Joaquín Torres García: hilo rojo como símbolo de conexión y tul para la transparencia etérea; dialoga entre la grilla rígida y una ligereza delicada.",
+      "imagenes": [
+        "assets/images/sincretismo/sincretismo1.png",
+        "assets/images/sincretismo/sincretismo2.jpg",
+        "assets/images/sincretismo/sincretismo3.jpg",
+        "assets/images/sincretismo/sincretismo4.png"
+      ]
+    },
+    {
+      "titulo": "Ígneo",
+      "categoria": "Retail",
+      "descripcion": "Colección femenina que fusiona literatura y volcanes; terracota y azul marino narran contención, explosión y renovación con siluetas fluidas y cortes audaces.",
+      "imagenes": [
+        "assets/images/igneo/igneo1.png",
+        "assets/images/igneo/igneo2.png",
+        "assets/images/igneo/igneo3.png",
+        "assets/images/igneo/igneo2.png"
+      ],
+      "video": "assets/images/igneo/igneo.mp4"
+    },
+    {
+      "titulo": "Recorrido Cíclico",
+      "categoria": "Prêt-à-porter",
+      "descripcion": "Observa el agua como un ciclo sin principio ni fin; cada capa conserva memoria y conecta cielos, tierras, cuerpos y tiempos mediante transparencias y reflejos.",
+      "imagenes": [
+        "assets/images/recorrido ciclico/recorrido1.jpg",
+        "assets/images/recorrido ciclico/recorrido2.jpg",
+        "assets/images/recorrido ciclico/recorrido3.png",
+        "assets/images/recorrido ciclico/recorrido2.jpg"
+      ],
+      "video": "assets/images/recorrido ciclico/recorrido_ciclico.mp4"
+    },
+    {
+      "titulo": "Gǎibiàn",
+      "categoria": "Concepto",
+      "descripcion": "Explora la mutación que ocurre más allá de lo visible: un proceso sutil, continuo y profundo donde patrón y transformación dialogan sin estridencia.",
+      "imagenes": [
+        "assets/images/galbiran/galbiran1.jpeg",
+        "assets/images/galbiran/galbiran2.jpeg",
+        "assets/images/galbiran/galbiran3.jpeg",
+        "assets/images/galbiran/galbiran4.jpeg"
+      ]
+    },
+    {
+      "titulo": "Joyas Contemporáneas",
+      "categoria": "Joyería",
+      "descripcion": "Piezas de cobre martillado inspiradas en el ciclo del agua; dos estructuras unidas que se mueven distinto para reflejar continuidad, luz y movimiento.",
+      "imagenes": [
+        "assets/images/joyas contemporaneas/joyasContemporaneas1.png",
+        "assets/images/joyas contemporaneas/joyasContemporaneas2.png",
+        "assets/images/joyas contemporaneas/joyasContemporaneas3.png",
+        "assets/images/joyas contemporaneas/joyasContemporaneas4.png"
+      ]
+    },
+    {
+      "titulo": "Joya del Pacífico",
+      "categoria": "Colaboración",
+      "descripcion": "Colaboración con Mathilda Tinkler para Miss Continental 2025; reinterpreta el imaginario marítimo chileno con brillo, identidad y fuerza simbólica del océano.",
+      "imagenes": [
+        "assets/images/joyas del pacifico/joyasPacifico1.png",
+        "assets/images/joyas del pacifico/joyasPacifico2.png",
+        "assets/images/joyas del pacifico/joyasPacifico3.png",
+        "assets/images/joyas del pacifico/joyasPacifico4.png"
+      ]
+    }
   ],
   "procesos": {
     "editorial": [
-      {"titulo":"Luz suave","img":"assets/images/portfolio/page-8-img-60.jpeg"},
-      {"titulo":"Paleta durazno","img":"assets/images/portfolio/page-2-img-397.jpeg"},
-      {"titulo":"Composición mínima","img":"assets/images/portfolio/page-15-img-614.jpeg"}
+      {
+        "titulo": "Luz suave",
+        "img": "assets/images/portfolio/page-8-img-60.jpeg"
+      },
+      {
+        "titulo": "Paleta durazno",
+        "img": "assets/images/portfolio/page-2-img-397.jpeg"
+      },
+      {
+        "titulo": "Composición mínima",
+        "img": "assets/images/portfolio/page-15-img-614.jpeg"
+      }
     ],
     "moodboards": [
-      {"titulo":"Armónicos pastel","img":"assets/images/portfolio/page-10-img-71.png"},
-      {"titulo":"Texturas ligeras","img":"assets/images/portfolio/page-10-img-73.png"},
-      {"titulo":"Lavanda y salvia","img":"assets/images/portfolio/page-10-img-74.png"}
+      {
+        "titulo": "Armónicos pastel",
+        "img": "assets/images/portfolio/page-10-img-71.png"
+      },
+      {
+        "titulo": "Texturas ligeras",
+        "img": "assets/images/portfolio/page-10-img-73.png"
+      },
+      {
+        "titulo": "Lavanda y salvia",
+        "img": "assets/images/portfolio/page-10-img-74.png"
+      }
     ],
     "lifestyle": [
-      {"titulo":"Costa dorada","img":"assets/images/portfolio/page-8-img-61.jpeg"},
-      {"titulo":"Selva húmeda","img":"assets/images/portfolio/page-8-img-62.jpeg"},
-      {"titulo":"Detalle orgánico","img":"assets/images/portfolio/page-15-img-629.jpeg"}
+      {
+        "titulo": "Costa dorada",
+        "img": "assets/images/portfolio/page-8-img-61.jpeg"
+      },
+      {
+        "titulo": "Selva húmeda",
+        "img": "assets/images/portfolio/page-8-img-62.jpeg"
+      },
+      {
+        "titulo": "Detalle orgánico",
+        "img": "assets/images/portfolio/page-15-img-629.jpeg"
+      }
     ]
+  },
+  "media": {
+    "images": {
+      "editorial": [
+        "assets/images/portfolio/page-8-img-60.jpeg",
+        "assets/images/portfolio/page-2-img-397.jpeg"
+      ],
+      "retail": [
+        "assets/images/portfolio/page-9-img-561.png",
+        "assets/images/portfolio/page-8-img-61.jpeg"
+      ],
+      "pretaporte": [
+        "assets/images/portfolio/page-13-img-86.jpeg",
+        "assets/images/portfolio/page-13-img-85.png"
+      ],
+      "joyeria": [
+        "assets/images/portfolio/page-17-img-134.jpeg",
+        "assets/images/portfolio/page-17-img-133.png"
+      ],
+      "pasarela": [
+        "assets/images/portfolio/page-19-img-143.png"
+      ],
+      "prensa": [
+        "assets/images/portfolio/page-20-img-147.png"
+      ],
+      "destinos": [
+        "destinos-inspiran/WhatsApp Image 2025-11-18 at 14.21.19.jpeg",
+        "destinos-inspiran/WhatsApp Image 2025-11-18 at 14.21.20 (1).jpeg"
+      ]
+    },
+    "videos": {
+      "proyectos": [
+        "assets/images/igneo/igneo.mp4",
+        "assets/images/recorrido ciclico/recorrido_ciclico.mp4"
+      ],
+      "procesos": [
+        "assets/images/recorrido ciclico/recorrido_ciclico.mp4"
+      ]
+    }
   },
   "images": [
     {

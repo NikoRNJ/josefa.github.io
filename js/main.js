@@ -56,29 +56,6 @@ Array.from(document.images).forEach(img=>{
 });
 
 // Galería con carrusel 5s, controles y lightbox
-const track=document.querySelector('#gallery .gallery-track');
-const items=track?Array.from(track.children):[];
-const dotsWrap=document.getElementById('g-dots');
-const gPrev=document.getElementById('g-prev');
-const gNext=document.getElementById('g-next');
-let gi=0, gTimer;
-if(track){
-  dotsWrap.innerHTML=items.map((_,i)=>`<button data-i="${i}"></button>`).join('');
-  const dots=Array.from(dotsWrap.querySelectorAll('button'));
-  const setActive=idx=>{gi=idx;dots.forEach((d,i)=>d.classList.toggle('active',i===gi));track.style.transform=`translateX(-${gi*100}%)`;track.style.transition='transform .4s ease'};
-  const nextSlide=()=>setActive((gi+1)%items.length);
-  const prevSlide=()=>setActive((gi-1+items.length)%items.length);
-  gNext.addEventListener('click',nextSlide);
-  gPrev.addEventListener('click',prevSlide);
-  dots.forEach((d,i)=>d.addEventListener('click',()=>setActive(i)));
-  const start=()=>{clearInterval(gTimer);gTimer=setInterval(nextSlide,5000)};
-  const stop=()=>clearInterval(gTimer);
-  start();
-  document.getElementById('gallery').addEventListener('mouseenter',stop);
-  document.getElementById('gallery').addEventListener('mouseleave',start);
-  setActive(0);
-}
-
 // Lightbox
 let lb=document.querySelector('.lightbox');
 if(!lb){lb=document.createElement('div');lb.className='lightbox';lb.innerHTML='<img alt="">';document.body.appendChild(lb)}
@@ -100,18 +77,63 @@ fetch('data/portfolio.json').then(r=>r.json()).then(data=>{
   if(ce) ce.textContent=data.contacto?.email, ce.href='mailto:'+data.contacto?.email;
   if(ci) ci.textContent=data.contacto?.instagram;
   if(cp) cp.textContent=data.contacto?.telefono;
-  const pg=document.getElementById('projects-grid');
-  if(pg && Array.isArray(data.proyectos)){
-    pg.innerHTML=data.proyectos.map(p=>`<article class="card"><img src="${p.imagenes[0]}" alt="${p.titulo}" loading="lazy" decoding="async"><div class="card-body"><h3>${p.titulo}</h3><p>${p.descripcion}</p></div></article>`).join('');
+  const pSlider=document.getElementById('proj-slider');
+  const pPrev=document.getElementById('p-prev');
+  const pNext=document.getElementById('p-next');
+  const pDots=document.getElementById('proj-dots');
+  if(pSlider && Array.isArray(data.proyectos)){
+    const slidesHtml=data.proyectos.map(p=>{
+      const a=p.imagenes||[];
+      const main=a[0]||'';
+      const s1=a[1]||main;
+      const s2=a[2]||s1;
+      const w=a[3]||s2;
+      const mainBlock = p.video ? `<video src="${p.video}" controls preload="metadata" poster="${main}"></video>` : `<img src="${main}" alt="${p.titulo}">`;
+      return `<div class="proj-slide"><div class="proj-layout"><div class="proj-main">${mainBlock}</div><div class="proj-side"><div class="small"><img src="${s1}" alt="${p.titulo}"></div><div class="small"><img src="${s2}" alt="${p.titulo}"></div><div class="wide"><img src="${w}" alt="${p.titulo}"></div></div></div><div class="proj-meta"><h3>${p.titulo}</h3><p>${p.descripcion}</p></div></div>`
+    }).join('');
+    pSlider.innerHTML=slidesHtml;
+    const slides=Array.from(pSlider.querySelectorAll('.proj-slide'));
+    const projectVideos=slides.map(slide=>slide.querySelector('video')).filter(Boolean);
+    pDots.innerHTML=slides.map(()=>'<span class="s-dot"></span>').join('');
+    const dots=Array.from(pDots.querySelectorAll('.s-dot'));
+    const setDots=(idx)=>{dots.forEach((d,i)=>{d.className='s-dot small';if(i===idx){d.className='s-dot large'}else if(i===idx-1||i===idx+1){d.className='s-dot medium'}if(i===0||i===dots.length-1){d.className='s-dot small'}})};
+    const idx=()=>Math.round(pSlider.scrollLeft/(pSlider.clientWidth*0.88));
+    const upd=()=>setDots(Math.max(0,Math.min(dots.length-1,idx())));
+    pSlider.addEventListener('scroll',()=>{clearTimeout(pSlider._t);pSlider._t=setTimeout(upd,50)});
+    pPrev?.addEventListener('click',()=>{pSlider.scrollBy({left:-pSlider.clientWidth*0.88,behavior:'smooth'})});
+    pNext?.addEventListener('click',()=>{pSlider.scrollBy({left:pSlider.clientWidth*0.88,behavior:'smooth'})});
+    pDots.addEventListener('click',e=>{const i=dots.indexOf(e.target);if(i>=0){pSlider.scrollTo({left:i*pSlider.clientWidth*0.88,behavior:'smooth'})}});
+    if(projectVideos.length){
+      if('IntersectionObserver' in window){
+        const videoObserver=new IntersectionObserver(entries=>{
+          entries.forEach(entry=>{if(!entry.isIntersecting){entry.target.pause();}});
+        },{root:pSlider,threshold:.6});
+        projectVideos.forEach(video=>videoObserver.observe(video));
+      }else{
+        const pauseHidden=()=>{const left=pSlider.scrollLeft;const right=left+pSlider.clientWidth;projectVideos.forEach(video=>{const slide=video.closest('.proj-slide');if(!slide)return;const sLeft=slide.offsetLeft;const sRight=sLeft+slide.offsetWidth;if(sRight<left||sLeft>right){video.pause();}})};
+        pSlider.addEventListener('scroll',()=>{clearTimeout(pSlider._vh);pSlider._vh=setTimeout(pauseHidden,60)});
+      }
+    }
+    upd();
   }
   const rg=document.getElementById('recon-grid');
   if(rg && Array.isArray(data.proyectos)){
     const recs=data.proyectos.filter(x=>['Reconocimiento','Pasarela','Colaboración'].includes(x.categoria));
     rg.innerHTML=recs.map(p=>`<article class="card"><img src="${(p.imagenes&&p.imagenes[0])||''}" alt="${p.titulo}" loading="lazy" decoding="async"><div class="card-body"><h3>${p.titulo}</h3><p>${p.descripcion}</p></div></article>`).join('');
   }
+  const insta=document.querySelector('.instagram .insta-row');
+  if(insta && Array.isArray(data.proyectos)){
+    const pool=[]; data.proyectos.forEach(p=>{(p.imagenes||[]).forEach(src=>pool.push({src,alt:p.titulo}))});
+    const pick=[]; const used=new Set();
+    while(pick.length<5 && pool.length){
+      const i=Math.floor(Math.random()*pool.length);
+      const item=pool[i]; if(!used.has(item.src)){used.add(item.src); pick.push(item)}
+    }
+    insta.innerHTML=pick.map(i=>`<img src="${i.src}" alt="${i.alt}" loading="lazy" decoding="async">`).join('');
+  }
   const gallery=document.querySelector('#gallery .gallery-track');
   const dots=document.getElementById('g-dots');
-  const tabs=Array.from(document.querySelectorAll('.tab'));
+  const tabs=Array.from(document.querySelectorAll('.tab[data-cat]'));
   const renderCat=cat=>{
     const arr=data.procesos?.[cat]||[];
     gallery.innerHTML=arr.map(i=>`<div class="gallery-item"><img src="${i.img}" alt="${i.titulo}" loading="lazy" decoding="async"></div>`).join('');
@@ -135,25 +157,3 @@ fetch('data/portfolio.json').then(r=>r.json()).then(data=>{
   tabs.forEach(t=>t.onclick=()=>{tabs.forEach(x=>x.classList.toggle('active',x===t));renderCat(t.dataset.cat)});
   renderCat('editorial');
 }).catch(()=>{});
-
-// Video Player minimal
-const v=document.getElementById('video-player');
-const vPlay=document.getElementById('v-play');
-const vProgress=document.getElementById('v-progress');
-const vTime=document.getElementById('v-time');
-const vMute=document.getElementById('v-mute');
-const vVolume=document.getElementById('v-volume');
-const vFull=document.getElementById('v-full');
-const vThumbs=document.querySelectorAll('.video-thumbs .thumb');
-if(v){
-  const fmt=s=>{const m=Math.floor(s/60)||0;const sec=Math.floor(s%60)||0;return `${m}:${String(sec).padStart(2,'0')}`};
-  const update=()=>{if(v.duration){vProgress.value=(v.currentTime/v.duration)*100;vTime.textContent=`${fmt(v.currentTime)} / ${fmt(v.duration)}`}}
-  v.addEventListener('timeupdate',update);
-  v.addEventListener('loadedmetadata',update);
-  vPlay.onclick=()=>{if(v.paused){v.play();vPlay.textContent='⏸'}else{v.pause();vPlay.textContent='▶'}};
-  vProgress.oninput=()=>{if(v.duration){v.currentTime=(vProgress.value/100)*v.duration}}
-  vMute.onclick=()=>{v.muted=!v.muted;vMute.textContent=v.muted?'🔇':'🔈'}
-  vVolume.oninput=()=>{v.volume=parseFloat(vVolume.value);v.muted=v.volume===0;vMute.textContent=v.muted?'🔇':'🔈'}
-  vFull.onclick=()=>{if(!document.fullscreenElement){v.requestFullscreen?.()}else{document.exitFullscreen?.()}}
-  vThumbs.forEach(t=>t.onclick=()=>{v.pause();v.src=t.dataset.src;v.load();v.play();vPlay.textContent='⏸'})
-}

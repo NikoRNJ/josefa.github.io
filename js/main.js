@@ -1,6 +1,10 @@
 const toggle=document.getElementById("nav-toggle");
 const links=document.getElementById("nav-links");
-toggle.addEventListener("click",()=>{const open=links.style.display==="flex";links.style.display=open?"none":"flex"});
+let navOpen=false;
+const setNavState=()=>{if(window.innerWidth>900){links.style.display="flex"}else{links.style.display=navOpen?"flex":"none"}};
+toggle.addEventListener("click",()=>{navOpen=!navOpen;setNavState()});
+window.addEventListener("resize",setNavState);
+setNavState();
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",e=>{const id=a.getAttribute("href");const el=document.querySelector(id);if(el){e.preventDefault();el.scrollIntoView({behavior:"smooth",block:"start"});links.style.display="none"}})});
 const header=document.querySelector(".site-header");
 const onScroll=()=>{if(window.scrollY>10){header.style.background="rgba(255,255,255,.85)"}else{header.style.background="rgba(255,255,255,.6)"}};

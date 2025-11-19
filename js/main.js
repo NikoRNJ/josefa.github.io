@@ -85,6 +85,14 @@ fetch('data/portfolio.json').then(r=>r.json()).then(data=>{
   const pPrev=document.getElementById('p-prev');
   const pNext=document.getElementById('p-next');
   const pDots=document.getElementById('proj-dots');
+  const escapeHtml=(str='')=>String(str).replace(/[&<>"']/g,ch=>({
+    '&':'&amp;',
+    '<':'&lt;',
+    '>':'&gt;',
+    '"':'&quot;',
+    "'":'&#39;'
+  })[ch]||ch);
+  const renderDetail=(detail)=>Array.isArray(detail)?detail.filter(Boolean).map(txt=>`<p>${escapeHtml(txt)}</p>`).join(''):'';
   if(pSlider && Array.isArray(data.proyectos)){
     const slidesHtml=data.proyectos.map(p=>{
       const a=p.imagenes||[];
@@ -93,10 +101,34 @@ fetch('data/portfolio.json').then(r=>r.json()).then(data=>{
       const s2=a[2]||s1;
       const w=a[3]||s2;
       const mainBlock = p.video ? `<video src="${p.video}" controls preload="metadata" poster="${main}"></video>` : `<img src="${main}" alt="${p.titulo}">`;
-      return `<div class="proj-slide"><div class="proj-layout"><div class="proj-main">${mainBlock}</div><div class="proj-side"><div class="small"><img src="${s1}" alt="${p.titulo}"></div><div class="small"><img src="${s2}" alt="${p.titulo}"></div><div class="wide"><img src="${w}" alt="${p.titulo}"></div></div></div><div class="proj-meta"><h3>${p.titulo}</h3><p>${p.descripcion}</p></div></div>`
+      const detailHtml=renderDetail(p.detalle);
+      const detailBlock=detailHtml?`<p class="proj-toggle" role="button" tabindex="0" aria-expanded="false" data-closed="Ver concepto completo" data-open="Ocultar concepto">Ver concepto completo</p><div class="proj-extra" hidden>${detailHtml}</div>`:'';
+      return `<div class="proj-slide"><div class="proj-layout"><div class="proj-main">${mainBlock}</div><div class="proj-side"><div class="small"><img src="${s1}" alt="${p.titulo}"></div><div class="small"><img src="${s2}" alt="${p.titulo}"></div><div class="wide"><img src="${w}" alt="${p.titulo}"></div></div></div><div class="proj-meta"><h3>${p.titulo}</h3><p>${p.descripcion}</p>${detailBlock}</div></div>`
     }).join('');
     pSlider.innerHTML=slidesHtml;
     const slides=Array.from(pSlider.querySelectorAll('.proj-slide'));
+    const detailToggles=pSlider.querySelectorAll('.proj-toggle');
+    detailToggles.forEach(toggle=>{
+      const extra=toggle.nextElementSibling;
+      if(!extra)return;
+      const setState=expanded=>{
+        toggle.setAttribute('aria-expanded',expanded);
+        extra.hidden=!expanded;
+        const label=expanded?(toggle.dataset.open||'Ocultar detalle'):(toggle.dataset.closed||'Ver detalle');
+        toggle.textContent=label;
+      };
+      setState(false);
+      toggle.addEventListener('click',()=>{
+        const expanded=toggle.getAttribute('aria-expanded')==='true';
+        setState(!expanded);
+      });
+      toggle.addEventListener('keydown',e=>{
+        if(e.key==='Enter'||e.key===' '){
+          e.preventDefault();
+          toggle.click();
+        }
+      });
+    });
     const projectVideos=slides.map(slide=>slide.querySelector('video')).filter(Boolean);
     pDots.innerHTML=slides.map(()=>'<span class="s-dot"></span>').join('');
     const dots=Array.from(pDots.querySelectorAll('.s-dot'));
@@ -137,27 +169,44 @@ fetch('data/portfolio.json').then(r=>r.json()).then(data=>{
   }
   const gallery=document.querySelector('#gallery .gallery-track');
   const dots=document.getElementById('g-dots');
-  const tabs=Array.from(document.querySelectorAll('.tab[data-cat]'));
-  const renderCat=cat=>{
-    const arr=data.procesos?.[cat]||[];
-    gallery.innerHTML=arr.map(i=>`<div class="gallery-item"><img src="${i.img}" alt="${i.titulo}" loading="lazy" decoding="async"></div>`).join('');
-    const ds=arr.map((_,i)=>`<button data-i="${i}"></button>`).join('');
-    dots.innerHTML=ds;
-    const dsEls=Array.from(dots.querySelectorAll('button'));
-    let idx=0, timer;
-    const set=ii=>{idx=ii;dsEls.forEach((d,i)=>d.classList.toggle('active',i===idx));gallery.style.transform=`translateX(-${idx*100}%)`;gallery.style.transition='transform .4s ease'};
-    const nextF=()=>set((idx+1)%arr.length);
-    const prevF=()=>set((idx-1+arr.length)%arr.length);
-    document.getElementById('g-next').onclick=nextF;
-    document.getElementById('g-prev').onclick=prevF;
-    dsEls.forEach((d,i)=>d.onclick=()=>set(i));
-    const start=()=>{clearInterval(timer);if(arr.length)timer=setInterval(nextF,5000)};
-    const stop=()=>clearInterval(timer);
-    document.getElementById('gallery').onmouseenter=stop;
-    document.getElementById('gallery').onmouseleave=start;
-    set(0);start();
-    document.querySelectorAll('.gallery-item img').forEach(img=>{img.style.cursor='zoom-in';img.onclick=()=>{lbImg.src=img.currentSrc||img.src;lb.classList.add('open')}});
-  };
-  tabs.forEach(t=>t.onclick=()=>{tabs.forEach(x=>x.classList.toggle('active',x===t));renderCat(t.dataset.cat)});
-  renderCat('editorial');
+  const gNext=document.getElementById('g-next');
+  const gPrev=document.getElementById('g-prev');
+  const galleryWrap=document.getElementById('gallery');
+  const procesosArtistico=Array.isArray(data.procesos?.artistico)?data.procesos.artistico:[];
+  if(gallery && dots && gNext && gPrev && galleryWrap){
+    const renderProcesos=arr=>{
+      gallery.innerHTML=arr.map(i=>`<div class="gallery-item"><img src="${i.img}" alt="${i.titulo}" loading="lazy" decoding="async"></div>`).join('');
+      dots.innerHTML=arr.map((_,i)=>`<button data-i="${i}"></button>`).join('');
+      const dsEls=Array.from(dots.querySelectorAll('button'));
+      if(!arr.length){
+        gallery.style.transform='translateX(0)';
+        gNext.onclick=null;
+        gPrev.onclick=null;
+        return;
+      }
+      let idx=0, timer;
+      const set=ii=>{
+        idx=ii;
+        dsEls.forEach((d,i)=>d.classList.toggle('active',i===idx));
+        gallery.style.transform=`translateX(-${idx*100}%)`;
+        gallery.style.transition='transform .4s ease';
+      };
+      const nextF=()=>set((idx+1)%arr.length);
+      const prevF=()=>set((idx-1+arr.length)%arr.length);
+      gNext.onclick=nextF;
+      gPrev.onclick=prevF;
+      dsEls.forEach((d,i)=>d.onclick=()=>set(i));
+      const start=()=>{clearInterval(timer);if(arr.length>1)timer=setInterval(nextF,5000)};
+      const stop=()=>clearInterval(timer);
+      galleryWrap.onmouseenter=stop;
+      galleryWrap.onmouseleave=start;
+      set(0);
+      start();
+      gallery.querySelectorAll('.gallery-item img').forEach(img=>{
+        img.style.cursor='zoom-in';
+        img.onclick=()=>{lbImg.src=img.currentSrc||img.src;lb.classList.add('open')};
+      });
+    };
+    renderProcesos(procesosArtistico);
+  }
 }).catch(()=>{});

@@ -36,6 +36,10 @@
       "titulo": "Experimentación Textil: Sincretismo Latinoamericano",
       "categoria": "Textil",
       "descripcion": "Interpretación contemporánea de Joaquín Torres García: hilo rojo como símbolo de conexión y tul para la transparencia etérea; dialoga entre la grilla rígida y una ligereza delicada.",
+      "detalle": [
+        "Hoy en día, el arte y las ideas de Joaquín Torres García pueden reinterpretarse de múltiples formas. Desde lo visual, sus composiciones evocan relieve y construcción, pero más allá de los materiales, lo esencial es la manera en que el volumen y la geometría se traducen en lenguaje contemporáneo.",
+        "El uso del hilo rojo como símbolo de conexión, origen y continuidad junto al tul asociado a la transparencia, la superposición y la dimensión etérea permite dialogar con la estructura de grilla característica del artista, generando una lectura que oscila entre lo rígido y lo delicado."
+      ],
       "imagenes": [
         "assets/images/sincretismo/sincretismo1.png",
         "assets/images/sincretismo/sincretismo2.jpg",
@@ -47,6 +51,10 @@
       "titulo": "Ígneo",
       "categoria": "Retail",
       "descripcion": "Colección femenina que fusiona literatura y volcanes; terracota y azul marino narran contención, explosión y renovación con siluetas fluidas y cortes audaces.",
+      "detalle": [
+        "\"Ígneo\" es una colección femenina que combina la intensidad emocional de la literatura con la fuerza de los volcanes. Inspirada en la narrativa de transformación y deseo reprimido, se construye en torno a dos colores clave: terracota, que evoca el fuego y la pasión, y azul marino, que simboliza la pureza de la combustión de los fuegos.",
+        "Cada prenda captura el ciclo volcánico: la contención, la explosión y la renovación, reflejando la fuerza interior que emerge ante la adversidad. Con siluetas fluidas y cortes audaces, Ígneo celebra el poder creativo que, como el magma, siempre encuentra su camino hacia la superficie."
+      ],
       "imagenes": [
         "assets/images/igneo/igneo1.png",
         "assets/images/igneo/igneo2.png",
@@ -59,6 +67,12 @@
       "titulo": "Recorrido Cíclico",
       "categoria": "Prêt-à-porter",
       "descripcion": "Observa el agua como un ciclo sin principio ni fin; cada capa conserva memoria y conecta cielos, tierras, cuerpos y tiempos mediante transparencias y reflejos.",
+      "detalle": [
+        "El \"recorrido cíclico\" surge de la observación del agua como un elemento en constante cambio, cuyas formas y estados transitan en un bucle sin principio ni fin no solo como fenómeno natural, sino como un medio sensible de transmisión de memoria.",
+        "El ciclo del agua se convierte así en un recorrido simbólico y vital: no solo conecta cielos, tierras y mares, sino también tiempos, cuerpos y memorias. Su movimiento es el lenguaje con el que la naturaleza lleva relatos antiguos y los renueva en cada tránsito.",
+        "En su transparencia habita la historia; en su reflejo, la imagen de quienes fuimos y somos. Propone observar el agua como un espejo narrativo, donde lo visible y lo invisible coexisten, revelando capas de sentido que se activan con cada nuevo ciclo y con cada nueva mirada.",
+        "El \"recorrido cíclico\" del agua revela en cada capa un nuevo ciclo y una nueva mirada."
+      ],
       "imagenes": [
         "assets/images/recorrido ciclico/recorrido1.jpg",
         "assets/images/recorrido ciclico/recorrido2.jpg",
@@ -71,6 +85,10 @@
       "titulo": "Gǎibiàn",
       "categoria": "Concepto",
       "descripcion": "Explora la mutación que ocurre más allá de lo visible: un proceso sutil, continuo y profundo donde patrón y transformación dialogan sin estridencia.",
+      "detalle": [
+        "\"Gǎibiàn\" nace de la necesidad de explorar y exteriorizar lo que yace más allá de lo visible. Inspirados por la intrincada naturaleza del cambio, celebramos la mutación no como un evento abrupto y obvio, sino como un proceso sutil y complejo, cargado de potencial y profundidad.",
+        "En su visión, la transformación es un proceso continuo, una evolución que se despliega con revelación y reformación."
+      ],
       "imagenes": [
         "assets/images/galbiran/galbiran1.jpeg",
         "assets/images/galbiran/galbiran2.jpeg",
@@ -82,6 +100,11 @@
       "titulo": "Joyas Contemporáneas",
       "categoria": "Joyería",
       "descripcion": "Piezas de cobre martillado inspiradas en el ciclo del agua; dos estructuras unidas que se mueven distinto para reflejar continuidad, luz y movimiento.",
+      "detalle": [
+        "Inspirada en la transformación del agua, estas piezas se componen de dos estructuras iguales unidas entre sí. Aunque cada una se mueve de forma distinta, todas se conectan para funcionar como un todo, creando un diálogo en su recorrido.",
+        "La forma ondulante y abierta representa el ciclo del agua: un bucle continuo que simboliza el cambio constante. Está hecha de cobre martillado, un material que refleja la luz como la superficie y profundidad del agua.",
+        "Estas piezas transmiten la repetición, la fluidez y el contraste de movimientos evocados como el agua, en su tránsito, guarda y transforma historias, conectando pasado, presente y futuro. Buscan capturar ese momento en movimiento, donde el cambio no es ruptura, sino continuidad."
+      ],
       "imagenes": [
         "assets/images/joyas contemporaneas/joyasContemporaneas1.png",
         "assets/images/joyas contemporaneas/joyasContemporaneas2.png",
@@ -93,6 +116,11 @@
       "titulo": "Joya del Pacífico",
       "categoria": "Colaboración",
       "descripcion": "Colaboración con Mathilda Tinkler para Miss Continental 2025; reinterpreta el imaginario marítimo chileno con brillo, identidad y fuerza simbólica del océano.",
+      "detalle": [
+        "Se desarrolló una colaboración con Mathilda Tinkler para la gestión y creación del vestido que presentó en el certamen Miss Continental 2025.",
+        "El proyecto tomó como eje conceptual la temática \"Joya del Pacífico\", reinterpretando el imaginario cultural y marítimo vinculado a la costa chilena.",
+        "La propuesta busca resaltar el brillo, la identidad y la fuerza simbólica del océano Pacífico como elemento unificador, integrando referencias visuales que evocan movimiento, luminosidad y profundidad."
+      ],
       "imagenes": [
         "assets/images/joyas del pacifico/joyasPacifico1.png",
         "assets/images/joyas del pacifico/joyasPacifico2.png",
@@ -102,46 +130,194 @@
     }
   ],
   "procesos": {
-    "editorial": [
+    "artistico": [
       {
-        "titulo": "Luz suave",
-        "img": "assets/images/portfolio/page-8-img-60.jpeg"
+        "titulo": "Proceso artistico 01",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.38 (1).jpeg"
       },
       {
-        "titulo": "Paleta durazno",
-        "img": "assets/images/portfolio/page-2-img-397.jpeg"
+        "titulo": "Proceso artistico 02",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.38 (2).jpeg"
       },
       {
-        "titulo": "Composición mínima",
-        "img": "assets/images/portfolio/page-15-img-614.jpeg"
-      }
-    ],
-    "moodboards": [
-      {
-        "titulo": "Armónicos pastel",
-        "img": "assets/images/portfolio/page-10-img-71.png"
+        "titulo": "Proceso artistico 03",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.38 (3).jpeg"
       },
       {
-        "titulo": "Texturas ligeras",
-        "img": "assets/images/portfolio/page-10-img-73.png"
+        "titulo": "Proceso artistico 04",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.38.jpeg"
       },
       {
-        "titulo": "Lavanda y salvia",
-        "img": "assets/images/portfolio/page-10-img-74.png"
-      }
-    ],
-    "lifestyle": [
-      {
-        "titulo": "Costa dorada",
-        "img": "assets/images/portfolio/page-8-img-61.jpeg"
+        "titulo": "Proceso artistico 05",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39 (1).jpeg"
       },
       {
-        "titulo": "Selva húmeda",
-        "img": "assets/images/portfolio/page-8-img-62.jpeg"
+        "titulo": "Proceso artistico 06",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39 (2).jpeg"
       },
       {
-        "titulo": "Detalle orgánico",
-        "img": "assets/images/portfolio/page-15-img-629.jpeg"
+        "titulo": "Proceso artistico 07",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39 (3).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 08",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39 (4).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 09",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39 (5).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 10",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39 (6).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 11",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39 (7).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 12",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39 (8).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 13",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39 (9).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 14",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.39.jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 15",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.40 (1).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 16",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.40 (2).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 17",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.40.jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 18",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.41 (1).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 19",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.41 (2).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 20",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.41.jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 21",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.42.jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 22",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.43 (1).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 23",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.43 (2).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 24",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.43 (3).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 25",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.43.jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 26",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.44 (1).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 27",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.44 (2).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 28",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.44 (3).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 29",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.44.jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 30",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.45 (1).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 31",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.45 (2).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 32",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.45.jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 33",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.46 (2).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 34",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.46 (3).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 35",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.46 (4).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 36",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.46 (5).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 37",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.47 (1).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 38",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.47.jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 39",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.48 (1).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 40",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.48 (2).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 41",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.56.48.jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 42",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.59.42 (1).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 43",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.59.42 (2).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 44",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.59.42 (3).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 45",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.59.42 (4).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 46",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.59.42 (5).jpeg"
+      },
+      {
+        "titulo": "Proceso artistico 47",
+        "img": "assets/images/proceso artistico/WhatsApp Image 2025-11-18 at 15.59.42.jpeg"
       }
     ]
   },

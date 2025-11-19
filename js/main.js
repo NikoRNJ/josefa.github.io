@@ -34,6 +34,35 @@ if(sDots){
   sDots.addEventListener('click',e=>{const i=dots.indexOf(e.target);if(i>=0){slider.scrollTo({left:i*slider.clientWidth*0.8,behavior:'smooth'})}});
   update();
 }
+
+const rSlider=document.getElementById("r-slider");
+const rPrev=document.getElementById("r-prev");
+const rNext=document.getElementById("r-next");
+if(rSlider && rPrev && rNext){
+  const rScrollBy=()=>rSlider.scrollBy({left:rSlider.clientWidth*0.8,behavior:"smooth"});
+  rPrev.addEventListener("click",()=>{rSlider.scrollBy({left:-rSlider.clientWidth*0.8,behavior:"smooth"})});
+  rNext.addEventListener("click",rScrollBy);
+  const rDots=document.getElementById('r-dots');
+  if(rDots){
+    const slides=Array.from(rSlider.querySelectorAll('.slide'));
+    rDots.innerHTML=slides.map(()=>'<span class="s-dot"></span>').join('');
+    const dots=Array.from(rDots.querySelectorAll('.s-dot'));
+    const setDots=(idx)=>{
+      dots.forEach((d,i)=>{
+        d.className='s-dot small';
+        if(i===idx){d.className='s-dot large'}
+        else if(i===idx-1||i===idx+1){d.className='s-dot medium'}
+        if(i===0||i===dots.length-1){d.className='s-dot small'}
+      });
+    };
+    const currentIndex=()=>Math.round(rSlider.scrollLeft/(rSlider.clientWidth*0.8));
+    const update=()=>setDots(Math.max(0,Math.min(dots.length-1,currentIndex())));
+    rSlider.addEventListener('scroll',()=>{clearTimeout(rSlider._t);rSlider._t=setTimeout(update,50)});
+    rDots.addEventListener('click',e=>{const i=dots.indexOf(e.target);if(i>=0){rSlider.scrollTo({left:i*rSlider.clientWidth*0.8,behavior:'smooth'})}});
+    update();
+  }
+}
+
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in-view")}})},{threshold:.1});
 document.querySelectorAll(".card, .split, .slide, .service-card, .testimonial, .gallery-item, .cv-chip").forEach(el=>{el.classList.add("reveal");io.observe(el)});
 document.querySelectorAll('.reveal').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<window.innerHeight&&r.bottom>0){el.classList.add('in-view')}});
@@ -96,11 +125,18 @@ fetch('data/portfolio.json').then(r=>r.json()).then(data=>{
   if(pSlider && Array.isArray(data.proyectos)){
     const slidesHtml=data.proyectos.map(p=>{
       const a=p.imagenes||[];
-      const main=a[0]||'';
-      const s1=a[1]||main;
-      const s2=a[2]||s1;
-      const w=a[3]||s2;
-      const mainBlock = p.video ? `<video src="${p.video}" controls preload="metadata" poster="${main}"></video>` : `<img src="${main}" alt="${p.titulo}">`;
+      let mainBlock, s1, s2, w;
+      if(p.video){
+        mainBlock=`<video src="${p.video}" controls preload="metadata" poster="${a[0]||''}"></video>`;
+        s1=a[0]; s2=a[1]; w=a[2];
+      }else{
+        mainBlock=`<img src="${a[0]||''}" alt="${p.titulo}">`;
+        s1=a[1]; s2=a[2]; w=a[3];
+      }
+      if(!s1)s1=a[0]||'';
+      if(!s2)s2=s1;
+      if(!w)w=s2;
+
       const detailHtml=renderDetail(p.detalle);
       const detailBlock=detailHtml?`<p class="proj-toggle" role="button" tabindex="0" aria-expanded="false" data-closed="Ver concepto completo" data-open="Ocultar concepto">Ver concepto completo</p><div class="proj-extra" hidden>${detailHtml}</div>`:'';
       return `<div class="proj-slide"><div class="proj-layout"><div class="proj-main">${mainBlock}</div><div class="proj-side"><div class="small"><img src="${s1}" alt="${p.titulo}"></div><div class="small"><img src="${s2}" alt="${p.titulo}"></div><div class="wide"><img src="${w}" alt="${p.titulo}"></div></div></div><div class="proj-meta"><h3>${p.titulo}</h3><p>${p.descripcion}</p>${detailBlock}</div></div>`

@@ -125,7 +125,8 @@ a {
   right: 0;
   z-index: 50;
   backdrop-filter: saturate(160%) blur(10px);
-  background: rgba(255, 255, 255, .6)
+  background: rgba(255, 255, 255, .85);
+  transition: background .3s ease
 }
 
 .nav {

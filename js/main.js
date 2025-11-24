@@ -225,7 +225,32 @@ if (navToggle && navLinks) {
     setExpanded(!expanded);
   });
   navLinks.addEventListener('click', e => {
-    if (e.target.tagName === 'A') setExpanded(false);
+    if (e.target.tagName === 'A') {
+      e.preventDefault();
+      const href = e.target.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      const headerHeight = document.querySelector('.site-header').offsetHeight;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight - 24;
+      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+      // NO cerrar el menú en desktop (>=900px) para que el nav siga visible
+      if (window.innerWidth < 900) setExpanded(false);
+    }
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const href = anchor.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = document.querySelector(href);
+      if (!target) return;
+      e.preventDefault();
+      const headerHeight = document.querySelector('.site-header').offsetHeight;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight - 24;
+      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+      // Cerrar menú solo en móvil
+      if (window.innerWidth < 900) setExpanded(false);
+    });
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') setExpanded(false);

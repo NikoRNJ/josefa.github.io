@@ -81,21 +81,6 @@
       "video": "assets/images/recorrido ciclico/recorrido_ciclico.mp4"
     },
     {
-      "titulo": "Gǎibiàn",
-      "categoria": "Concepto",
-      "descripcion": "Explora la mutación que ocurre más allá de lo visible: un proceso sutil, continuo y profundo donde patrón y transformación dialogan sin estridencia.",
-      "detalle": [
-        "\"Gǎibiàn\" nace de la necesidad de explorar y exteriorizar lo que yace más allá de lo visible. Inspirados por la intrincada naturaleza del cambio, celebramos la mutación no como un evento abrupto y obvio, sino como un proceso sutil y complejo, cargado de potencial y profundidad.",
-        "En su visión, la transformación es un proceso continuo, una evolución que se despliega con revelación y reformación."
-      ],
-      "imagenes": [
-        "assets/images/galbiran/galbiran1.jpeg",
-        "assets/images/galbiran/galbiran2.jpeg",
-        "assets/images/galbiran/galbiran3.jpeg",
-        "assets/images/galbiran/galbiran4.jpeg"
-      ]
-    },
-    {
       "titulo": "Joyas Contemporáneas",
       "categoria": "Joyería",
       "descripcion": "Piezas de cobre martillado inspiradas en el ciclo del agua; dos estructuras unidas que se mueven distinto para reflejar continuidad, luz y movimiento.",
@@ -106,9 +91,7 @@
       ],
       "imagenes": [
         "assets/images/joyas contemporaneas/joyasContemporaneas1.png",
-        "assets/images/joyas contemporaneas/joyasContemporaneas2.png",
-        "assets/images/joyas contemporaneas/joyasContemporaneas3.png",
-        "assets/images/joyas contemporaneas/joyasContemporaneas4.png"
+        "assets/images/joyas contemporaneas/joyasContemporaneas2.png"
       ]
     },
     {
@@ -122,9 +105,7 @@
       ],
       "imagenes": [
         "assets/images/joyas del pacifico/joyasPacifico1.png",
-        "assets/images/joyas del pacifico/joyasPacifico2.png",
-        "assets/images/joyas del pacifico/joyasPacifico3.png",
-        "assets/images/joyas del pacifico/joyasPacifico4.png"
+        "assets/images/joyas del pacifico/joyasPacifico2.png"
       ]
     }
   ],

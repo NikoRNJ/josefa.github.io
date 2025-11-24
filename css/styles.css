@@ -890,25 +890,30 @@ textarea {
 
 .gallery-frame {
   overflow: hidden;
-  border-radius: 18px
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center
 }
 
 .gallery-track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
+  display: flex;
+  transition: transform .4s ease;
+  justify-content: center;
+  align-items: center;
   gap: 12px
 }
 
 .gallery-item {
   position: relative;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 500px;
   background: var(--rose-50);
   border-radius: 18px;
-  text-align: center
+  text-align: center;
+  flex: 0 0 100%
 }
 
 @media (max-width: 768px) {
@@ -929,7 +934,8 @@ textarea {
   max-width: 100%;
   object-fit: contain;
   margin: 0 auto;
-  display: block
+  display: block;
+  object-position: center center
 }
 
 .gallery-controls {

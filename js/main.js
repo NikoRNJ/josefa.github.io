@@ -211,3 +211,27 @@ fetch('data/portfolio.json').then(r => r.json()).then(data => {
     renderProcesos(procesosArtistico);
   }
 }).catch(() => { });
+
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+if (navToggle && navLinks) {
+  const setExpanded = (expanded) => {
+    navToggle.setAttribute('aria-expanded', expanded);
+    navLinks.classList.toggle('is-open', expanded);
+  };
+  setExpanded(false);
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    setExpanded(!expanded);
+  });
+  navLinks.addEventListener('click', e => {
+    if (e.target.tagName === 'A') setExpanded(false);
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') setExpanded(false);
+  });
+  document.addEventListener('click', e => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    if (expanded && !navLinks.contains(e.target) && e.target !== navToggle) setExpanded(false);
+  });
+}

@@ -1247,6 +1247,18 @@ textarea {
   }
 }
 
+@media (max-width:900px) {
+  .nav-links.is-open {
+    display: flex
+  }
+}
+
+@media (max-width:680px) {
+  .nav-links.is-open {
+    display: flex
+  }
+}
+
 @media (max-width:800px) {
   .values-layout {
     grid-template-columns: 1fr
